@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiC 문제 정보</title>
+    <link href="/images/MiC 흰색 로고.png" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            function goBack(event) {
+                event.preventDefault();
+                window.history.back();
+            }
+            document.getElementById('back-link').addEventListener('click', goBack);
+        });
+    </script>
+</head>
+<body>
+    <form action="/home" method="post">
+        <div class="box2" style="min-height: max-content; margin-top: 0px;">
+            <input type="submit" class="topnv" style = "width: 2060px; cursor: pointer;" value="IMPC">
+        </div>
+    </form>
+    <div class="container2">
+        <div class="left">
+            <a class="ip" style="width: 100px;" href="#" id="back-link">뒤로가기</a>
+        </div>
+        <div class="right">
+            <span class="ip" style="width: 100px;" th:if="${username != null}" th:text="${username}"></span>
+            <a class="ip" style="width: 100px;" th:if="${username != null}" href="/profile">Profile</a>
+            <a class="ip" style="width: 100px;" th:if="${username != null}" href="/logout">Logout</a>
+            
+            <form th:if="${username == null}" class = "rl" action="/movelogin" method="post">
+                <input class="ip" type="submit" value="로그인">
+            </form>
+            <form th:if="${username == null}" class = "rl" action="/moveregister" method="post">
+                <input class="ip" type="submit" value="회원가입">
+            </form>
+        </div>
+    </div>
+    <hr style="height: 3px; background-color: gray">
+    <div style="text-align: center;">
+        <div><span class="ip" style="width: 100px;" th:if="${message != null}" th:text="${message}"></span></div>
+        <hr class = "hh">
+        <div><span class="ip" style="width: 500px;" th:if="${error != null}" th:text="${error}"></span></div>
+        <hr class = "hh">
+        <div><span class="ip" style="width: 300px;" th:if="${result != null}" th:text="${result}"></span></div>
+        <hr class = "hh">
+        <div><span style="font-size: 40px; color: blueviolet; font-weight: bold;" th:if="${problemname != null}" th:text="${problemname}"></span></div>
+        <hr class = "hh">
+        <div style="font-size: 30px; margin-left: -570px;">문제 설명</div>
+        <div><span class="problem" th:if="${description != null}" th:text="${description}"></span></div>
+        <hr class = "hh">
+        <div style="font-size: 30px; margin-left: -640px;">입력</div>
+        <div><span class="problem" th:if="${inputdescription != null}" th:text="${inputdescription}"></span></div>
+        <hr class = "hh">
+        <div style="font-size: 30px; margin-left: -640px;">출력</div>
+        <div><span class="problem" th:if="${outputdescription != null}" th:text="${outputdescription}"></span></div>
+        <hr class = "hh">
+        <span class="problem" style="width: 350px; border: none;">
+            <div style="font-size: 30px; margin-left: -220px;">입력 예제</div>
+            <div><span class="example" th:if="${exampleinput != null}" th:text="${exampleinput}"></div>
+        </span>
+        <span class="problem" style="width: 350px; border: none;">
+            <div style="font-size: 30px; margin-left: -215px;">출력 예제</div>
+            <div><span class="example" th:if="${exampleoutput != null}" th:text="${exampleoutput}"></div>
+        </span>
+        <hr class = "hh">
+        <hr class = "hh">
+        <hr class = "hh">
+        <div style="font-size: 30px; margin-left: -640px;">제출</div>
+        <form action="/submitCode" method="post">
+            <textarea class="submitcode" name="code" rows="10" cols="50" placeholder="Enter your code here..." required></textarea>
+            <br>
+            <button class="submit" type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="flex-container">
+        <img src="/images/MiC 로고.png" alt="몰루">
+        <img src="/images/수학과 로고.png" alt="몰루">
+        <img src="/images/ACMSI 로고.png" alt="몰루">
+        <img src="/images/BK21 로고.png" alt="몰루">
+    </div>
+</body>
+</html>

@@ -1,0 +1,236 @@
+.topnv {
+    text-align: center;
+    font-size: 40px;
+    font-style: oblique;
+    margin-top: 30px;
+    background-color: blueviolet;
+    color: white;
+    height: 60px;
+    border: 0;
+}
+
+.box {
+    text-align: center;
+    font-size: 20px;
+    font-style: oblique;
+    margin-left: 30px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    width: 400px;
+}
+
+.button {
+    width: 800px;
+    font-size: 25px;
+    margin-top: 30px;
+    background-color: yellow;
+    border: 2px solid gray;
+    border-radius: 10px;
+    color: darkblue;
+}
+
+.button:hover {
+    background-color:aquamarine;
+}
+
+.flex-container {
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.flex-container img {
+    height: 80px;
+    width: auto;
+}
+
+.sp1 {
+    display: inline-block;
+    text-align: center;
+    width: 130px;
+    text-align: left;
+    font-size: 20px;
+}
+
+.hh {
+    width: 400px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: none;
+    opacity: 0;
+}
+
+.box2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* 화면 전체 높이를 채우도록 설정 */
+    margin: 0; /* 기본 마진 제거 */
+    margin-top: -150px;
+    font-family: Arial, sans-serif;
+    background-color: white; /* 배경색 설정 */
+}
+
+.formbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 450px;
+    border: 3px solid gray;
+    border-radius: 20px;
+}
+
+.container {
+    width: auto; /* 전체 컨테이너의 너비를 지정 */
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0 auto; /* 가운데 정렬 */
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.label {
+    font-size: 23px;
+}
+
+.label-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.input-field {
+    margin-left: 20px; /* 입력 필드와 텍스트 사이의 간격 */
+    width: 200px;
+    height: 25px;
+    font-size: 20px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    background-color: wheat;
+}
+
+.longtext {
+    width: 350px;
+    height: 100px;
+    font-size: 20px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    background-color: rgb(245, 238, 225);
+    resize: none;
+}
+
+.submit {
+    display: inline-block;
+    height: 40px;
+    font-size: 20px;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+.submit:hover {
+    background-color: aqua;
+}
+
+.rl {
+    display: inline;
+}
+
+.ip {
+    display: inline-block;
+    color: black;
+    height: 33px;
+    font-size: 20px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    background-color: white;
+}
+
+.ip:hover {
+    background-color: rgb(213, 213, 222);
+}
+
+.plus {
+    color: black;
+    text-decoration: none;
+    font-size: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 750px;
+    padding: 0px;
+    text-align: right;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.error-message {
+    font-size: 20px;
+    margin: 0px;
+    margin-top: -30px;
+    color: red;
+}
+
+.problem {
+    display: inline-block;
+    color: black;
+    font-size: 20px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    background-color: white;
+    width: 700px;
+}
+
+.example {
+    display: inline-block;
+    color: black;
+    font-size: 20px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    background-color: white;
+    margin: 0px;
+    width: 350px;
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0px;
+}
+
+.left {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.right {
+    flex: 1;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.submitcode {
+    resize: none;
+    width: 700px;
+    height: 500px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    font-size: 20px;
+}

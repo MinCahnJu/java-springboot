@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiC 대회 개최</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+    <form action="/home" method="post">
+        <div class="box2" style="min-height: max-content; margin-top: 0px;">
+            <input type="submit" class="topnv" style = "width: 2060px; cursor: pointer;" value="IMPC">
+        </div>
+    </form>
+    <div class="box2">
+        <div class="formbox">
+            <form action = "/makecontest" method="post">
+                <div class="container">
+                    <h1>대회 내용 지정</h1>
+                    <hr class = "hh">
+                    <div th:if="${error}" class="error-message">
+                        <p th:text="${error}"></p>
+                    </div>
+                    <div class="line">
+                        <div class="label-group">
+                            <span class="label">본</span>
+                            <span class="label">인</span>
+                            <span class="label">아</span>
+                            <span class="label">이</span>
+                            <span class="label">디:</span>
+                        </div>
+                        <input class="input-field" type="text" id="ID" name="ID" required>
+                    </div>
+                    <hr class = "hh">
+                    <div class="line">
+                        <div class="label-group">
+                            <span class="label">대</span>
+                            <span class="label">회</span>
+                            <span class="label">명:</span>
+                        </div>
+                        <input class="input-field" type="text" id="title" name="title" required>
+                    </div>
+                    <hr class = "hh">
+                    <div class="line">
+                        <div class="label-group">
+                            <span class="label">대</span>
+                            <span class="label">회</span>
+                            <span class="label">비</span>
+                            <span class="label">밀</span>
+                            <span class="label">번</span>
+                            <span class="label">호:</span>
+                        </div>
+                        <input class="input-field" type="password" id="password" name="password" required>
+                    </div>
+                    <hr class = "hh">
+                    <div class="line">
+                        <div class="label-group">
+                            <span class="label">비</span>
+                            <span class="label">밀</span>
+                            <span class="label">번</span>
+                            <span class="label">호</span>
+                            <span class="label">확</span>
+                            <span class="label">인:</span>
+                        </div>
+                        <input class="input-field" type="password" id="password2" name="password2" required>
+                    </div>
+                    <hr class = "hh">
+                    <div class="line">
+                        <div class="label-group">
+                            <span class="label">대</span>
+                            <span class="label">회</span>
+                            <span class="label">에</span>
+                            <span class="label"> </span>
+                            <span class="label">대</span>
+                            <span class="label">한</span>
+                            <span class="label"> </span>
+                            <span class="label">설</span>
+                            <span class="label">명:</span>
+                        </div>
+                    </div>
+                    <hr class = "hh">
+                    <textarea class="longtext" id="description" name="description" rows="10" cols="50" placeholder="Enter your contest description here..."></textarea>
+                    <hr class = "hh">
+                </div>
+                <hr class = "hh">
+                <input class="submit" type="submit" value="대회 만들기">
+                <hr class = "hh">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

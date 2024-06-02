@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiC 대회 개최</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+    <form action="/home" method="post">
+        <div class="box2" style="min-height: max-content; margin-top: 0px;">
+            <input type="submit" class="topnv" style = "width: 2060px; cursor: pointer;" value="IMPC">
+        </div>
+    </form>
+    <div class="box2">
+        <div class="formbox" style="width: 800px; margin-top: 200px;">
+            <form action="/makeproblem" method="post">
+                <div class="container">
+                    <h1>문제 내용 지정</h1>
+                    <hr class = "hh">
+                    <div th:if="${error}" class="error-message">
+                        <p th:text="${error}"></p>
+                    </div>
+                    <div>
+                        <span>Contest ID: </span>
+                        <span th:if="${contestid != null}" th:text="${contestid}"></span>
+                    </div>
+                    <span>Contest Name: </span>
+                    <span th:if="${contestname != null}" th:text="${contestname}"></span>
+                    <hr class = "hh">
+                    <div class="line" style = "width: 400px; margin-left: 150px;">
+                        <div class="label-group">
+                            <span class="label">문</span>
+                            <span class="label">제</span>
+                            <span class="label">이</span>
+                            <span class="label">름:</span>
+                        </div>
+                        <input class="input-field" type="text" id="title" name="title">
+                    </div>
+                    <hr class = "hh">
+                    <div class="line" style = "width: 400px; margin-left: 150px;">
+                        <div class="label-group">
+                            <span class="label">문</span>
+                            <span class="label">제</span>
+                            <span class="label">에</span>
+                            <span class="label"> </span>
+                            <span class="label">대</span>
+                            <span class="label">한</span>
+                            <span class="label"> </span>
+                            <span class="label">설</span>
+                            <span class="label">명</span>
+                        </div>
+                    </div>
+                    <hr class = "hh">
+                    <textarea class="longtext" style="width: 700px;" id="description" name="description" rows="10" cols="50" placeholder="Enter your contest description here..."></textarea>
+                    <hr class = "hh">
+                    <div class="line" style = "width: 400px; margin-left: 150px;">
+                        <div class="label-group">
+                            <span class="label">입</span>
+                            <span class="label">력</span>
+                            <span class="label">에</span>
+                            <span class="label"> </span>
+                            <span class="label">대</span>
+                            <span class="label">한</span>
+                            <span class="label"> </span>
+                            <span class="label">설</span>
+                            <span class="label">명</span>
+                        </div>
+                    </div>
+                    <hr class = "hh">
+                    <textarea class="longtext" style="width: 700px;" id="inputdescription" name="inputdescription" rows="10" cols="50" placeholder="Enter your contest description here..."></textarea>
+                    <hr class = "hh">
+                    <div class="line" style = "width: 400px; margin-left: 150px;">
+                        <div class="label-group">
+                            <span class="label">출</span>
+                            <span class="label">력</span>
+                            <span class="label">에</span>
+                            <span class="label"> </span>
+                            <span class="label">대</span>
+                            <span class="label">한</span>
+                            <span class="label"> </span>
+                            <span class="label">설</span>
+                            <span class="label">명</span>
+                        </div>
+                    </div>
+                    <hr class = "hh">
+                    <textarea class="longtext" style="width: 700px;" id="outputdescription" name="outputdescription" rows="10" cols="50" placeholder="Enter your contest description here..."></textarea>
+                    <hr class = "hh">
+                    <div class="line" style = "width: 400px; margin-left: 150px;">
+                        <div class="label-group">
+                            <span class="label">입</span>
+                            <span class="label">력</span>
+                            <span class="label">에</span>
+                            <span class="label"> </span>
+                            <span class="label">대</span>
+                            <span class="label">한</span>
+                            <span class="label"> </span>
+                            <span class="label">예</span>
+                            <span class="label">제</span>
+                        </div>
+                    </div>
+                    <hr class = "hh">
+                    <textarea class="longtext" style="width: 700px;" id="inputexample" name="inputexample" rows="10" cols="50" placeholder="Enter your contest description here..."></textarea>
+                    <hr class = "hh">
+                    <div class="line" style = "width: 400px; margin-left: 150px;">
+                        <div class="label-group">
+                            <span class="label">출</span>
+                            <span class="label">력</span>
+                            <span class="label">에</span>
+                            <span class="label"> </span>
+                            <span class="label">대</span>
+                            <span class="label">한</span>
+                            <span class="label"> </span>
+                            <span class="label">예</span>
+                            <span class="label">제</span>
+                        </div>
+                    </div>
+                    <hr class = "hh">
+                    <textarea class="longtext" style="width: 700px;" id="outputexample" name="outputexample" rows="10" cols="50" placeholder="Enter your contest description here..."></textarea>
+                    <hr class = "hh">
+                </div>
+                <hr class = "hh">
+                <input class="submit" type="submit" id="operation" name="operation" value="문제 더 만들기">
+                <input class="submit" type="submit" id="operation" name="operation" value="대회 완성">
+                <hr class = "hh">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

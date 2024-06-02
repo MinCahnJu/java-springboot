@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiC 로그인</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+    <form action="/home" method="post">
+        <div class="box2" style="min-height: max-content; margin-top: 0px;">
+            <input type="submit" class="topnv" style = "width: 2060px; cursor: pointer;" value="IMPC">
+        </div>
+    </form>
+    <div class="box2">
+        <div class="formbox">
+            <form id="multiActionForm" method="post">
+                <div class="container">
+                    <h1>로 그 인</h1>
+                    <hr class = "hh">
+                    <div th:if="${error}" class="error-message">
+                        <p th:text="${error}"></p>
+                    </div>
+                    <div class="line">
+                        <div class="label-group">
+                            <span class="label">아</span>
+                            <span class="label">이</span>
+                            <span class="label">디:</span>
+                        </div>
+                        <input class="input-field" type="text" id="ID" name="ID">
+                    </div>
+                    <hr class = "hh">
+                    <div class="line">
+                        <div class="label-group">
+                            <span class="label">비</span>
+                            <span class="label">밀</span>
+                            <span class="label">번</span>
+                            <span class="label">호:</span>
+                        </div>
+                        <input class="input-field" type="password" id="password" name="password">
+                    </div>
+                    <hr class = "hh">
+                </div>
+                <hr class = "hh">
+                <button class="submit" type="submit" name="action" value="action1">로그인</button>
+                <button class="submit" type="submit" name="action" value="action2">비밀번호 변경</button>
+                <script>
+                    document.getElementById('multiActionForm').addEventListener('submit', function(event) {
+                        const clickedButton = event.submitter;
+                        if (clickedButton) {
+                            if (clickedButton.value === 'action1') {
+                                this.action = "/login";
+                            } else if (clickedButton.value === 'action2') {
+                                this.action = '/movechangepassword';
+                            }
+                        }
+                    });
+                </script>
+                <hr class = "hh">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

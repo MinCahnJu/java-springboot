@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiC</title>
+    <link href="/images/MiC 흰색 로고.png" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+    <form action="/home" method="post">
+        <div class="box2" style="min-height: max-content; margin-top: 0px;">
+            <input type="submit" class="topnv" style = "width: 2060px; cursor: pointer;" value="MiC 주관 코딩대회">
+        </div>
+    </form>
+    <div style="text-align: right; margin-top: 10px; margin-right: 20px;">
+        <span class="ip" style="width: 100px;" th:if="${username != null}" th:text="${username}"></span>
+        <a class="ip" style="width: 100px;" th:if="${username != null}" href="/profile">Profile</a>
+        <a class="ip" style="width: 100px;" th:if="${username != null}" href="/logout">Logout</a>
+        
+        <form th:if="${username == null}" class = "rl" action="/movelogin" method="post">
+            <input class="ip" type="submit" value="로그인">
+        </form>
+        <form th:if="${username == null}" class = "rl" action="/moveregister" method="post">
+            <input class="ip" type="submit" value="회원가입">
+        </form>
+    </div>
+    <hr style="height: 3px; background-color: gray">
+    <div style="text-align: center;">
+        <li style="list-style-type: none;" th:each="contest : ${contests}">
+            <form action="/opencontest" method="post">
+                <input class="button" type="submit" id="contest" name="contest" th:value="${contest}">
+            </form>
+        </li>
+        <form action="/movemakecon" method="post">
+            <button type="submit" class="plus">+</button>
+        </form>
+    </div>
+    <div class="flex-container">
+        <img src="/images/MiC 로고.png" alt="몰루">
+        <img src="/images/수학과 로고.png" alt="몰루">
+        <img src="/images/ACMSI 로고.png" alt="몰루">
+        <img src="/images/BK21 로고.png" alt="몰루">
+    </div>
+</body>
+</html>

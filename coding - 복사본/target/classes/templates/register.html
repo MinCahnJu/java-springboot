@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiC 회원가입</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+    <form action="/home" method="post">
+        <div class="box2" style="min-height: max-content; margin-top: 0px;">
+            <input type="submit" class="topnv" style = "width: 2060px; cursor: pointer;" value="IMPC">
+        </div>
+    </form>
+    <div class="box2">
+        <div class="formbox">
+            <form action = "/register" method="post">
+                <div class="container">
+                    <h1>회  원  가  입</h1>
+                    <hr class = "hh">
+                    <div th:if="${error}" class="error-message">
+                        <p th:text="${error}"></p>
+                    </div>
+                    <div class="line">
+                        <div class="label-group">
+                            <span class="label">이</span>
+                            <span class="label">름:</span>
+                        </div>
+                        <input class="input-field" type="text" id="username" name="username" required>
+                    </div>
+                    <hr class = "hh">
+                    <div class="line">
+                        <div class="label-group">
+                            <span class="label">아</span>
+                            <span class="label">이</span>
+                            <span class="label">디:</span>
+                        </div>
+                        <input class="input-field" type="text" id="ID" name="ID" required>
+                    </div>
+                    <hr class = "hh">
+                    <div class="line">
+                        <div class="label-group">
+                            <span class="label">비</span>
+                            <span class="label">밀</span>
+                            <span class="label">번</span>
+                            <span class="label">호:</span>
+                        </div>
+                        <input class="input-field" type="password" id="password" name="password" required>
+                    </div>
+                    <hr class = "hh">
+                    <div class="line">
+                        <div class="label-group">
+                            <span class = "label">비</span>
+                            <span class = "label">밀</span>
+                            <span class = "label">번</span>
+                            <span class = "label">호</span>
+                            <span class = "label">확</span>
+                            <span class = "label">인:</span>
+                        </div>
+                        <input class="input-field" type="password" id="password" name="password2" required>
+                    </div>
+                    <hr class = "hh">
+                    <div class="line">
+                        <div class="label-group">
+                            <span class = "label">전</span>
+                            <span class = "label">화</span>
+                            <span class = "label">번</span>
+                            <span class = "label">호:</span>
+                        </div>
+                        <input class="input-field" type="text" id="phoneNumber" name="phoneNumber" required>
+                    </div>
+                </div>
+                <hr class = "hh">
+                <input class="submit" type="submit" value="회원가입">
+                <hr class = "hh">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
